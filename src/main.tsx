@@ -1,3 +1,4 @@
+import "@fontsource-variable/hepta-slab"; // Supports weights 100-900
 import "@fontsource-variable/inter"; // Supports weights 100-900
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";

@@ -1,4 +1,3 @@
-import { AppShell } from "@mantine/core";
 import { Helmet } from "react-helmet";
 
 export function ListPage() {
@@ -7,7 +6,7 @@ export function ListPage() {
       <Helmet>
         <title>List | Chorelist</title>
       </Helmet>
-      <AppShell.Main>List Page</AppShell.Main>
+      <div>List Page</div>
     </>
   );
 }

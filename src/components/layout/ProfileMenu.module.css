@@ -1,0 +1,21 @@
+.button {
+  border-radius: var(--mantine-border-radius);
+  padding: 8px 12px;
+  transition: all 200ms;
+
+  &[data-expanded] {
+    background-color: var(--mantine-profile-menu-button-hover);
+  }
+
+  @mixin hover {
+    background-color: var(--mantine-profile-menu-button-hover);
+  }
+}
+
+.menuItem {
+  padding: 8px 12px;
+
+  &[data-hovered] {
+    background-color: var(--mantine-menu-item-hover);
+  }
+}

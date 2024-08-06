@@ -1,0 +1,26 @@
+.navlink {
+  border-radius: var(--mantine-border-radius);
+  padding: 8px 12px;
+  transition: all 200ms;
+
+  &[aria-current="page"] {
+    background-color: var(--mantine-navlink-active-bg);
+
+    [aria-label="icon"] {
+      color: var(--mantine-navlink-active-color);
+    }
+
+    [aria-label="count"] {
+      color: var(--mantine-navlink-active-color) !important;
+      font-weight: 600;
+    }
+
+    [aria-label="text"] {
+      font-weight: 600;
+    }
+  }
+
+  @mixin hover {
+    background-color: var(--mantine-navlink-hover);
+  }
+}
