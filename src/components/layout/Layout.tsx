@@ -3,10 +3,22 @@ import { useDisclosure } from "@mantine/hooks";
 import { Navbar } from "@src/components/layout/Navbar";
 import { ThemeSwitch } from "@src/components/layout/ThemeSwitch";
 import { ToggleSidebarAction } from "@src/components/layout/ToggleSidebarAction";
-import { Outlet } from "react-router-dom";
+import { useUserStore } from "@src/stores/user.store";
+import { useEffect } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
 
 export function Layout() {
   const [opened, { toggle }] = useDisclosure(true);
+  const navigateTo = useNavigate();
+  const { uid } = useUserStore();
+
+  useEffect(() => {
+    if (uid) {
+      navigateTo("/today");
+    } else {
+      navigateTo("/login");
+    }
+  }, [navigateTo, uid]);
 
   return (
     <AppShell
